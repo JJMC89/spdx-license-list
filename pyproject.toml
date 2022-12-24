@@ -1,0 +1,53 @@
+[build-system]
+requires = ["poetry_core>=1.0.8"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+target-version = ["py37"]
+line-length = 79  # default: 88
+
+
+[tool.isort]
+py_version = 37
+add_imports = ["from __future__ import annotations"]
+atomic = true
+ensure_newline_before_comments = true
+force_grid_wrap = 0
+include_trailing_comma = true
+lines_after_imports = 2
+multi_line_output = 3
+use_parentheses = true
+
+
+[tool.mypy]
+upython_version = 3.7
+check_untyped_defs = true
+disallow_any_generics = true
+disallow_incomplete_defs = true
+disallow_untyped_defs = true
+enable_error_code = [
+    "ignore-without-code",
+]
+warn_redundant_casts = true
+warn_unused_ignores = true
+
+
+[tool.poetry]
+authors = ["JJMC89"]
+classifiers = [
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3 :: Only",
+    "Typing :: Typed",
+]
+description = "SPDX License List as a Python dictionary"
+license = "MIT"
+name = "spdx-license-list"
+readme = "README.md"
+repository = "https://github.com/JJMC89/spdx-license-list"
+version = "0.0"
+
+[tool.poetry.dependencies]
+python = "^3.7"

@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+from __future__ import annotations
+
+import json
+import re
+
+
+SRC_PY = "src/spdx_license_list/__init__.py"
+
+
+def main(*args: str) -> int:
+    with open("spdx-license-list-data/json/licenses.json") as f:
+        data = json.load(f)
+    licenses = [
+        f"""\
+    {i["licenseId"]!r}: License(
+        id={i["licenseId"]!r},
+        name={i["name"]!r},
+        deprecated_id={i["isDeprecatedLicenseId"]},
+        fsf_libre={i.get("isFsfLibre", False)},
+        osi_approved={i.get("isOsiApproved", False)},
+    ),"""
+        for i in data["licenses"]
+    ]
+    licenses_s = "\n".join(licenses)
+    with open(SRC_PY) as f:
+        content = f.read()
+    content = re.sub(
+        r"^(LICENSES: .+? = ).+",
+        rf"\1{{\n{licenses_s}\n}}\n",
+        content,
+        flags=re.M | re.S,
+    )
+    with open(SRC_PY, "w") as f:
+        f.write(content)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

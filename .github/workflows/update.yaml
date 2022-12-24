@@ -1,0 +1,84 @@
+name: update from upstream
+on:
+  schedule:
+    - cron: '0 1 * * 2'
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    outputs:
+      tag: ${{ steps.check-tags.outputs.tag }}
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.2.0
+        with:
+          fetch-depth: 0
+      - name: check if update needed
+        id: check-tags
+        run: |
+          CURRENT_TAG=$(git describe --abbrev=0 || echo v0.0)
+          UPSTREAM_TAG=$(curl -s "https://api.github.com/repos/spdx/license-list-data/tags" | jq -r '[.[] | .name] | .[0]')
+          if [ $CURRENT_TAG == $UPSTREAM_TAG ]; then
+            echo no update needed >> $GITHUB_STEP_SUMMARY
+          else
+            echo updating from $CURRENT_TAG to $UPSTREAM_TAG >> $GITHUB_STEP_SUMMARY
+            echo tag=$UPSTREAM_TAG >> $GITHUB_OUTPUT
+          fi
+  update:
+    needs: check
+    if: needs.check.outputs.tag != ''
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: set up python
+        uses: actions/setup-python@v4.4.0
+        with:
+          python-version: 3.8
+      - name: install poetry
+        uses: snok/install-poetry@v1.3.3
+      - name: checkout
+        uses: actions/checkout@v3.2.0
+      - name: checkout upstream
+        uses: actions/checkout@v3.2.0
+        with:
+          path: spdx-license-list-data
+          persist-credentials: false
+          ref: ${{ needs.check.outputs.tag }}
+          repository: spdx/license-list-data
+      - name: update
+        run: bin/update
+      - name: format with black
+        uses: pre-commit/action@v3.0.0
+        with:
+          extra_args: black --files src/*/*.py || true
+      - name: run pre-commit
+        uses: pre-commit/action@v3.0.0
+      - name: build, tag, and push
+        run: |
+          UPSTREAM_TAG=${{ needs.check.outputs.tag }}
+          poetry version ${UPSTREAM_TAG:1}
+          poetry build
+          git diff
+          git add -u
+          git config user.name github-actions[bot]
+          git config user.email github-actions[bot]@users.noreply.github.com
+          git commit -m $UPSTREAM_TAG
+          git tag $UPSTREAM_TAG -m $UPSTREAM_TAG
+          git push --follow-tags
+      - name: GitHub release with assets
+        id: release
+        uses: softprops/action-gh-release@v0.1.15
+        with:
+          body: SPDX License List ${{ needs.check.outputs.tag }}
+          files: dist/*
+          tag_name: ${{ needs.check.outputs.tag }}
+      - name: publish to PyPI
+        uses: pypa/gh-action-pypi-publish@v1.6.4
+        with:
+          password: ${{ secrets.PYPI_API_TOKEN }}
+      - name: rollback release on failure
+        if: failure() && steps.release.outputs.id != ''
+        uses: author/action-rollback@1.0.3
+        with:
+          release_id: ${{ steps.release.outputs.id }}
