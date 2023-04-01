@@ -10,7 +10,7 @@ jobs:
       tag: ${{ steps.check-tags.outputs.tag }}
     steps:
       - name: checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3.5.0
         with:
           fetch-depth: 0
       - name: check if update needed
@@ -38,9 +38,9 @@ jobs:
       - name: install poetry
         uses: snok/install-poetry@v1.3.3
       - name: checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3.5.0
       - name: checkout upstream
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3.5.0
         with:
           path: spdx-license-list-data
           persist-credentials: false
