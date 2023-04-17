@@ -10,7 +10,7 @@ jobs:
       tag: ${{ steps.check-tags.outputs.tag }}
     steps:
       - name: checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
       - name: check if update needed
@@ -32,15 +32,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: set up python
-        uses: actions/setup-python@v4.5.0
+        uses: actions/setup-python@v4
         with:
           python-version: 3.8
       - name: install poetry
-        uses: snok/install-poetry@v1.3.3
+        uses: snok/install-poetry@v1
       - name: checkout
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3
       - name: checkout upstream
-        uses: actions/checkout@v3.5.0
+        uses: actions/checkout@v3
         with:
           path: spdx-license-list-data
           persist-credentials: false
@@ -49,11 +49,11 @@ jobs:
       - name: update
         run: bin/update
       - name: format with black
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3
         with:
           extra_args: black --files src/*/*.py || true
       - name: run pre-commit
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3
       - name: build, tag, and push
         run: |
           UPSTREAM_TAG=${{ needs.check.outputs.tag }}
@@ -68,13 +68,13 @@ jobs:
           git push --follow-tags
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@v0.1.15
+        uses: softprops/action-gh-release@v1
         with:
           body: SPDX License List ${{ needs.check.outputs.tag }}
           files: dist/*
           tag_name: ${{ needs.check.outputs.tag }}
       - name: publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v1.8.4
+        uses: pypa/gh-action-pypi-publish@v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
       - name: rollback release on failure
