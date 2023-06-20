@@ -295,6 +295,20 @@ LICENSES: dict[str, License] = {
         fsf_libre=True,
         osi_approved=True,
     ),
+    "ASWF-Digital-Assets-1.0": License(
+        id="ASWF-Digital-Assets-1.0",
+        name="ASWF Digital Assets License version 1.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "ASWF-Digital-Assets-1.1": License(
+        id="ASWF-Digital-Assets-1.1",
+        name="ASWF Digital Assets License 1.1",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Baekmuk": License(
         id="Baekmuk",
         name="Baekmuk License",
@@ -361,6 +375,13 @@ LICENSES: dict[str, License] = {
     "BlueOak-1.0.0": License(
         id="BlueOak-1.0.0",
         name="Blue Oak Model License 1.0.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Boehm-GC": License(
+        id="Boehm-GC",
+        name="Boehm-Demers-Weiser GC License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -953,6 +974,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "CC-BY-SA-3.0-IGO": License(
+        id="CC-BY-SA-3.0-IGO",
+        name="Creative Commons Attribution-ShareAlike 3.0 IGO",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "CC-BY-SA-4.0": License(
         id="CC-BY-SA-4.0",
         name="Creative Commons Attribution Share Alike 4.0 International",
@@ -1296,6 +1324,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "dtoa": License(
+        id="dtoa",
+        name="David M. Gay dtoa License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "dvipdfm": License(
         id="dvipdfm",
         name="dvipdfm License",
@@ -1487,7 +1522,7 @@ LICENSES: dict[str, License] = {
     ),
     "FSFULLRWD": License(
         id="FSFULLRWD",
-        name="FSF Unlimited License (With License Retention    and Warranty Disclaimer)",
+        name="FSF Unlimited License (With License Retention and Warranty Disclaimer)",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -1968,6 +2003,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "Inner-Net-2.0": License(
+        id="Inner-Net-2.0",
+        name="Inner Net License v2.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Intel": License(
         id="Intel",
         name="Intel Open Source License",
@@ -2076,6 +2118,13 @@ LICENSES: dict[str, License] = {
     "Latex2e": License(
         id="Latex2e",
         name="Latex2e License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Latex2e-translated-notice": License(
+        id="Latex2e-translated-notice",
+        name="Latex2e with translated notice permission",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2234,9 +2283,30 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=True,
     ),
+    "Linux-man-pages-1-para": License(
+        id="Linux-man-pages-1-para",
+        name="Linux man-pages - 1 paragraph",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Linux-man-pages-copyleft": License(
         id="Linux-man-pages-copyleft",
         name="Linux man-pages Copyleft",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Linux-man-pages-copyleft-2-para": License(
+        id="Linux-man-pages-copyleft-2-para",
+        name="Linux man-pages Copyleft - 2 paragraphs",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Linux-man-pages-copyleft-var": License(
+        id="Linux-man-pages-copyleft-var",
+        name="Linux man-pages Copyleft Variant",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2332,6 +2402,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "metamail": License(
+        id="metamail",
+        name="metamail License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Minpack": License(
         id="Minpack",
         name="Minpack License",
@@ -2384,6 +2461,13 @@ LICENSES: dict[str, License] = {
     "MIT-feh": License(
         id="MIT-feh",
         name="feh License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "MIT-Festival": License(
+        id="MIT-Festival",
+        name="MIT Festival Variant",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2615,6 +2699,13 @@ LICENSES: dict[str, License] = {
     "NIST-PD-fallback": License(
         id="NIST-PD-fallback",
         name="NIST Public Domain Notice with license fallback",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "NIST-Software": License(
+        id="NIST-Software",
+        name="NIST Software License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2955,6 +3046,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=True,
     ),
+    "OLFL-1.3": License(
+        id="OLFL-1.3",
+        name="Open Logistics Foundation License Version 1.3",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=True,
+    ),
     "OML": License(
         id="OML",
         name="Open Market License",
@@ -2979,6 +3077,13 @@ LICENSES: dict[str, License] = {
     "OPL-1.0": License(
         id="OPL-1.0",
         name="Open Public License v1.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "OPL-UK-3.0": License(
+        id="OPL-UK-3.0",
+        name="United    Kingdom Open Parliament Licence v3.0",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -3270,6 +3375,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=True,
         osi_approved=False,
     ),
+    "SGP4": License(
+        id="SGP4",
+        name="SGP4 Permission Notice",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "SHL-0.5": License(
         id="SHL-0.5",
         name="Solderpad Hardware License v0.5",
@@ -3445,6 +3557,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "TermReadKey": License(
+        id="TermReadKey",
+        name="TermReadKey License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "TMate": License(
         id="TMate",
         name="TMate Open Source License",
@@ -3536,6 +3655,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "UnixCrypt": License(
+        id="UnixCrypt",
+        name="UnixCrypt License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Unlicense": License(
         id="Unlicense",
         name="The Unlicense",
@@ -3606,6 +3732,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=True,
     ),
+    "Widget-Workshop": License(
+        id="Widget-Workshop",
+        name="Widget Workshop License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Wsuipa": License(
         id="Wsuipa",
         name="Wsuipa License",
@@ -3641,9 +3774,23 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "Xdebug-1.03": License(
+        id="Xdebug-1.03",
+        name="Xdebug License v 1.03",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Xerox": License(
         id="Xerox",
         name="Xerox License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Xfig": License(
+        id="Xfig",
+        name="Xfig License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
