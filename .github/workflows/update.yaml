@@ -68,13 +68,13 @@ jobs:
           git push --follow-tags
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@release/v1
+        uses: softprops/action-gh-release@v1
         with:
           body: SPDX License List ${{ needs.check.outputs.tag }}
           files: dist/*
           tag_name: ${{ needs.check.outputs.tag }}
       - name: publish to PyPI
-        uses: pypa/gh-action-pypi-publish@v1
+        uses: pypa/gh-action-pypi-publish@release/v1
         with:
           password: ${{ secrets.PYPI_API_TOKEN }}
       - name: rollback release on failure
