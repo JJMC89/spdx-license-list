@@ -68,7 +68,7 @@ jobs:
           git push --follow-tags
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@release/v1
+        uses: softprops/action-gh-release@v1
         with:
           body: SPDX License List ${{ needs.check.outputs.tag }}
           files: dist/*
