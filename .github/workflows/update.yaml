@@ -49,11 +49,11 @@ jobs:
       - name: update
         run: bin/update
       - name: format with black
-        uses: pre-commit/action@v3
+        uses: pre-commit/action@v3.0.0
         with:
           extra_args: black --files src/*/*.py || true
       - name: run pre-commit
-        uses: pre-commit/action@v3
+        uses: pre-commit/action@v3.0.0
       - name: build, tag, and push
         run: |
           UPSTREAM_TAG=${{ needs.check.outputs.tag }}
@@ -68,7 +68,7 @@ jobs:
           git push --follow-tags
       - name: GitHub release with assets
         id: release
-        uses: softprops/action-gh-release@v1
+        uses: softprops/action-gh-release@release/v1
         with:
           body: SPDX License List ${{ needs.check.outputs.tag }}
           files: dist/*
