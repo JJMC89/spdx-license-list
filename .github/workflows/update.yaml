@@ -25,8 +25,8 @@ jobs:
             echo tag=$UPSTREAM_TAG >> $GITHUB_OUTPUT
           fi
   update:
-    needs: check
     if: needs.check.outputs.tag != ''
+    needs: check
     permissions:
       contents: write
     runs-on: ubuntu-latest
@@ -66,17 +66,34 @@ jobs:
           git commit -m $UPSTREAM_TAG
           git tag $UPSTREAM_TAG -m $UPSTREAM_TAG
           git push --follow-tags
-      - name: GitHub release with assets
+      - name: upload dist artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: dist
+          path: dist
+  publish:
+    environment: publish
+    if: needs.check.outputs.tag != ''
+    needs: update
+    permissions:
+      contents: write
+      id-token: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: download dist artifacts
+        uses: actions/download-artifact@v3
+        with:
+          name: dist
+          path: dist
+      - name: github release with assets
         id: release
         uses: softprops/action-gh-release@v1
         with:
           body: SPDX License List ${{ needs.check.outputs.tag }}
           files: dist/*
           tag_name: ${{ needs.check.outputs.tag }}
-      - name: publish to PyPI
+      - name: publish to pypi
         uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          password: ${{ secrets.PYPI_API_TOKEN }}
       - name: rollback release on failure
         if: failure() && steps.release.outputs.id != ''
         uses: author/action-rollback@1.0.3
