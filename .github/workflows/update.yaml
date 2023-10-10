@@ -74,7 +74,9 @@ jobs:
   publish:
     environment: publish
     if: needs.check.outputs.tag != ''
-    needs: update
+    needs:
+      - check
+      - update
     permissions:
       contents: write
       id-token: write
