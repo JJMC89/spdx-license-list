@@ -1,4 +1,5 @@
 """SPDX License List as a dictionary."""
+
 from __future__ import annotations
 
 from typing import NamedTuple
