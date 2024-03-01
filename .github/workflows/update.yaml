@@ -49,11 +49,11 @@ jobs:
       - name: update
         run: bin/update
       - name: format with black
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3.0.1
         with:
           extra_args: black --files src/*/*.py || true
       - name: run pre-commit
-        uses: pre-commit/action@v3.0.0
+        uses: pre-commit/action@v3.0.1
       - name: build, tag, and push
         run: |
           UPSTREAM_TAG=${{ needs.check.outputs.tag }}
