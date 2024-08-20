@@ -10,7 +10,7 @@ SRC_PY = "src/spdx_license_list/__init__.py"
 
 def main(*args: str) -> int:
     with open("spdx-license-list-data/json/licenses.json") as f:
-        data = json.load(f)
+        license_data = json.load(f)
     licenses = [
         f"""\
     {i["licenseId"]!r}: License(
@@ -20,14 +20,32 @@ def main(*args: str) -> int:
         fsf_libre={i.get("isFsfLibre", False)},
         osi_approved={i.get("isOsiApproved", False)},
     ),"""
-        for i in data["licenses"]
+        for i in license_data["licenses"]
     ]
     licenses_s = "\n".join(licenses)
+    with open("spdx-license-list-data/json/exceptions.json") as f:
+        exception_data = json.load(f)
+    exceptions = [
+        f"""\
+    {i["licenseExceptionId"]!r}: LicenseException(
+        id={i["licenseExceptionId"]!r},
+        name={i["name"]!r},
+        deprecated_id={i["isDeprecatedLicenseId"]},
+    ),"""
+        for i in exception_data["exceptions"]
+    ]
+    exceptions_s = "\n".join(exceptions)
     with open(SRC_PY) as f:
         content = f.read()
     content = re.sub(
-        r"^(LICENSES: .+? = ).+",
-        rf"\1{{\n{licenses_s}\n}}\n",
+        r"^(LICENSES: .+? = ).+?(\n+EXCEPTIONS:)",
+        rf"\1{{\n{licenses_s}\n}}\2",
+        content,
+        flags=re.M | re.S,
+    )
+    content = re.sub(
+        r"^(EXCEPTIONS: .+? = ).+",
+        rf"\1{{\n{exceptions_s}\n}}\n",
         content,
         flags=re.M | re.S,
     )

@@ -15,6 +15,14 @@ class License(NamedTuple):
     osi_approved: bool
 
 
+class LicenseException(NamedTuple):
+    """Data for a license exception."""
+
+    id: str
+    name: str
+    deprecated_id: bool
+
+
 LICENSES: dict[str, License] = {
     "0BSD": License(
         id="0BSD",
@@ -4679,3 +4687,6 @@ LICENSES: dict[str, License] = {
         osi_approved=True,
     ),
 }
+
+
+EXCEPTIONS: dict[str, LicenseException] = {}
