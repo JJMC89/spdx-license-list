@@ -1493,6 +1493,20 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "DocBook-Schema": License(
+        id="DocBook-Schema",
+        name="DocBook Schema License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "DocBook-XML": License(
+        id="DocBook-XML",
+        name="DocBook XML License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Dotseqn": License(
         id="Dotseqn",
         name="Dotseqn License",
@@ -2144,6 +2158,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "HIDAPI": License(
+        id="HIDAPI",
+        name="HIDAPI License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Hippocratic-2.1": License(
         id="Hippocratic-2.1",
         name="Hippocratic License 2.1",
@@ -2266,6 +2287,13 @@ LICENSES: dict[str, License] = {
     "HPND-MIT-disclaimer": License(
         id="HPND-MIT-disclaimer",
         name="Historical Permission Notice and Disclaimer with MIT disclaimer",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "HPND-Netrek": License(
+        id="HPND-Netrek",
+        name="Historical Permission Notice and Disclaimer - Netrek variant",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -3162,7 +3190,7 @@ LICENSES: dict[str, License] = {
     "Net-SNMP": License(
         id="Net-SNMP",
         name="Net-SNMP License",
-        deprecated_id=False,
+        deprecated_id=True,
         fsf_libre=False,
         osi_approved=False,
     ),
@@ -3887,6 +3915,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=True,
         osi_approved=False,
     ),
+    "Ruby-pty": License(
+        id="Ruby-pty",
+        name="Ruby pty extension license",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "SAX-PD": License(
         id="SAX-PD",
         name="Sax Public Domain Notice",
@@ -4286,6 +4321,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "Ubuntu-font-1.0": License(
+        id="Ubuntu-font-1.0",
+        name="Ubuntu Font Licence v1.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "UCAR": License(
         id="UCAR",
         name="UCAR License",
@@ -4410,7 +4452,7 @@ LICENSES: dict[str, License] = {
         name="W3C Software Notice and Document License (2015-05-13)",
         deprecated_id=False,
         fsf_libre=False,
-        osi_approved=False,
+        osi_approved=True,
     ),
     "w3m": License(
         id="w3m",
@@ -4464,6 +4506,13 @@ LICENSES: dict[str, License] = {
     "X11-distribute-modifications-variant": License(
         id="X11-distribute-modifications-variant",
         name="X11 License Distribution Modification Variant",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "X11-swapped": License(
+        id="X11-swapped",
+        name="X11 swapped final paragraphs",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
