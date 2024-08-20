@@ -4,24 +4,20 @@ build-backend = "poetry.core.masonry.api"
 
 
 [tool.black]
-target-version = ["py38"]
+target-version = ["py39"]
 line-length = 79  # default: 88
 
 
 [tool.isort]
-py_version = 38
-add_imports = ["from __future__ import annotations"]
 atomic = true
-ensure_newline_before_comments = true
-force_grid_wrap = 0
-include_trailing_comma = true
+profile = "black"
+py_version = 39
+add_imports = ["from __future__ import annotations"]
 lines_after_imports = 2
-multi_line_output = 3
-use_parentheses = true
 
 
 [tool.mypy]
-python_version = 3.8
+python_version = 3.9
 enable_error_code = [
     "ignore-without-code",
 ]
@@ -45,4 +41,4 @@ repository = "https://github.com/JJMC89/spdx-license-list"
 version = "3.25.0"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = ">=3.9"
