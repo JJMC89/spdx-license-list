@@ -12,7 +12,7 @@ Provides the SPDX License List as a Python dictionary
 
 Data source: [spdx/license-list-data](https://github.com/spdx/license-list-data)
 
-Designed as a replacement for [Michael Pöhn's spdx-license-list](https://gitlab.com/uniqx/spdx-license-list) but does not have the same API
+Originally designed as a replacement for [Michael Pöhn's spdx-license-list](https://gitlab.com/uniqx/spdx-license-list) but does not have the same API
 
 ## Installation
 
@@ -30,3 +30,11 @@ The dictionary uses the identifier (**id**) as the keys, and the values are (typ
 - **deprecated_id** (*bool*) - idendifier is deprecated
 - **fsf_libre** (*bool*) - license is [listed as free by the FSF](https://www.gnu.org/licenses/license-list.en.html)
 - **osi_approved** (*bool*) - license is [OSI-approved](https://opensource.org/licenses)
+
+
+`spdx_license_list.EXCEPTIONS` is a dictionary of all the license exceptions.
+
+The dictionary uses the identifier (**id**) as the keys, and the values are (typed) named tuples with the following attributes:
+- **id** (*str*) - short identifier to identify a match to license exceptions in the context of an SPDX file, a source file, or elsewhere
+- **name** (*str*) - full name that should be the title found in the license file or consistent with naming from other well-known sources
+- **deprecated_id** (*bool*) - idendifier is deprecated

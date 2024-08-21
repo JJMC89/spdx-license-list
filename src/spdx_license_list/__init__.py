@@ -15,6 +15,14 @@ class License(NamedTuple):
     osi_approved: bool
 
 
+class LicenseException(NamedTuple):
+    """Data for a license exception."""
+
+    id: str
+    name: str
+    deprecated_id: bool
+
+
 LICENSES: dict[str, License] = {
     "0BSD": License(
         id="0BSD",
@@ -4677,5 +4685,369 @@ LICENSES: dict[str, License] = {
         deprecated_id=False,
         fsf_libre=True,
         osi_approved=True,
+    ),
+}
+
+
+EXCEPTIONS: dict[str, LicenseException] = {
+    "389-exception": LicenseException(
+        id="389-exception",
+        name="389 Directory Server Exception",
+        deprecated_id=False,
+    ),
+    "Asterisk-exception": LicenseException(
+        id="Asterisk-exception",
+        name="Asterisk exception",
+        deprecated_id=False,
+    ),
+    "Asterisk-linking-protocols-exception": LicenseException(
+        id="Asterisk-linking-protocols-exception",
+        name="Asterisk linking protocols exception",
+        deprecated_id=False,
+    ),
+    "Autoconf-exception-2.0": LicenseException(
+        id="Autoconf-exception-2.0",
+        name="Autoconf exception 2.0",
+        deprecated_id=False,
+    ),
+    "Autoconf-exception-3.0": LicenseException(
+        id="Autoconf-exception-3.0",
+        name="Autoconf exception 3.0",
+        deprecated_id=False,
+    ),
+    "Autoconf-exception-generic": LicenseException(
+        id="Autoconf-exception-generic",
+        name="Autoconf generic exception",
+        deprecated_id=False,
+    ),
+    "Autoconf-exception-generic-3.0": LicenseException(
+        id="Autoconf-exception-generic-3.0",
+        name="Autoconf generic exception for GPL-3.0",
+        deprecated_id=False,
+    ),
+    "Autoconf-exception-macro": LicenseException(
+        id="Autoconf-exception-macro",
+        name="Autoconf macro exception",
+        deprecated_id=False,
+    ),
+    "Bison-exception-1.24": LicenseException(
+        id="Bison-exception-1.24",
+        name="Bison exception 1.24",
+        deprecated_id=False,
+    ),
+    "Bison-exception-2.2": LicenseException(
+        id="Bison-exception-2.2",
+        name="Bison exception 2.2",
+        deprecated_id=False,
+    ),
+    "Bootloader-exception": LicenseException(
+        id="Bootloader-exception",
+        name="Bootloader Distribution Exception",
+        deprecated_id=False,
+    ),
+    "Classpath-exception-2.0": LicenseException(
+        id="Classpath-exception-2.0",
+        name="Classpath exception 2.0",
+        deprecated_id=False,
+    ),
+    "CLISP-exception-2.0": LicenseException(
+        id="CLISP-exception-2.0",
+        name="CLISP exception 2.0",
+        deprecated_id=False,
+    ),
+    "cryptsetup-OpenSSL-exception": LicenseException(
+        id="cryptsetup-OpenSSL-exception",
+        name="cryptsetup OpenSSL exception",
+        deprecated_id=False,
+    ),
+    "DigiRule-FOSS-exception": LicenseException(
+        id="DigiRule-FOSS-exception",
+        name="DigiRule FOSS License Exception",
+        deprecated_id=False,
+    ),
+    "eCos-exception-2.0": LicenseException(
+        id="eCos-exception-2.0",
+        name="eCos exception 2.0",
+        deprecated_id=False,
+    ),
+    "erlang-otp-linking-exception": LicenseException(
+        id="erlang-otp-linking-exception",
+        name="Erlang/OTP Linking Exception",
+        deprecated_id=False,
+    ),
+    "Fawkes-Runtime-exception": LicenseException(
+        id="Fawkes-Runtime-exception",
+        name="Fawkes Runtime Exception",
+        deprecated_id=False,
+    ),
+    "FLTK-exception": LicenseException(
+        id="FLTK-exception",
+        name="FLTK exception",
+        deprecated_id=False,
+    ),
+    "fmt-exception": LicenseException(
+        id="fmt-exception",
+        name="fmt exception",
+        deprecated_id=False,
+    ),
+    "Font-exception-2.0": LicenseException(
+        id="Font-exception-2.0",
+        name="Font exception 2.0",
+        deprecated_id=False,
+    ),
+    "freertos-exception-2.0": LicenseException(
+        id="freertos-exception-2.0",
+        name="FreeRTOS Exception 2.0",
+        deprecated_id=False,
+    ),
+    "GCC-exception-2.0": LicenseException(
+        id="GCC-exception-2.0",
+        name="GCC Runtime Library exception 2.0",
+        deprecated_id=False,
+    ),
+    "GCC-exception-2.0-note": LicenseException(
+        id="GCC-exception-2.0-note",
+        name="GCC    Runtime Library exception 2.0 - note variant",
+        deprecated_id=False,
+    ),
+    "GCC-exception-3.1": LicenseException(
+        id="GCC-exception-3.1",
+        name="GCC Runtime Library exception 3.1",
+        deprecated_id=False,
+    ),
+    "Gmsh-exception": LicenseException(
+        id="Gmsh-exception",
+        name="Gmsh exception>",
+        deprecated_id=False,
+    ),
+    "GNAT-exception": LicenseException(
+        id="GNAT-exception",
+        name="GNAT exception",
+        deprecated_id=False,
+    ),
+    "GNOME-examples-exception": LicenseException(
+        id="GNOME-examples-exception",
+        name="GNOME examples exception",
+        deprecated_id=False,
+    ),
+    "GNU-compiler-exception": LicenseException(
+        id="GNU-compiler-exception",
+        name="GNU Compiler Exception",
+        deprecated_id=False,
+    ),
+    "gnu-javamail-exception": LicenseException(
+        id="gnu-javamail-exception",
+        name="GNU JavaMail exception",
+        deprecated_id=False,
+    ),
+    "GPL-3.0-interface-exception": LicenseException(
+        id="GPL-3.0-interface-exception",
+        name="GPL-3.0 Interface Exception",
+        deprecated_id=False,
+    ),
+    "GPL-3.0-linking-exception": LicenseException(
+        id="GPL-3.0-linking-exception",
+        name="GPL-3.0 Linking Exception",
+        deprecated_id=False,
+    ),
+    "GPL-3.0-linking-source-exception": LicenseException(
+        id="GPL-3.0-linking-source-exception",
+        name="GPL-3.0 Linking Exception (with Corresponding Source)",
+        deprecated_id=False,
+    ),
+    "GPL-CC-1.0": LicenseException(
+        id="GPL-CC-1.0",
+        name="GPL Cooperation Commitment 1.0",
+        deprecated_id=False,
+    ),
+    "GStreamer-exception-2005": LicenseException(
+        id="GStreamer-exception-2005",
+        name="GStreamer Exception (2005)",
+        deprecated_id=False,
+    ),
+    "GStreamer-exception-2008": LicenseException(
+        id="GStreamer-exception-2008",
+        name="GStreamer Exception (2008)",
+        deprecated_id=False,
+    ),
+    "i2p-gpl-java-exception": LicenseException(
+        id="i2p-gpl-java-exception",
+        name="i2p GPL+Java Exception",
+        deprecated_id=False,
+    ),
+    "KiCad-libraries-exception": LicenseException(
+        id="KiCad-libraries-exception",
+        name="KiCad Libraries Exception",
+        deprecated_id=False,
+    ),
+    "LGPL-3.0-linking-exception": LicenseException(
+        id="LGPL-3.0-linking-exception",
+        name="LGPL-3.0 Linking Exception",
+        deprecated_id=False,
+    ),
+    "libpri-OpenH323-exception": LicenseException(
+        id="libpri-OpenH323-exception",
+        name="libpri OpenH323 exception",
+        deprecated_id=False,
+    ),
+    "Libtool-exception": LicenseException(
+        id="Libtool-exception",
+        name="Libtool Exception",
+        deprecated_id=False,
+    ),
+    "Linux-syscall-note": LicenseException(
+        id="Linux-syscall-note",
+        name="Linux Syscall Note",
+        deprecated_id=False,
+    ),
+    "LLGPL": LicenseException(
+        id="LLGPL",
+        name="LLGPL Preamble",
+        deprecated_id=False,
+    ),
+    "LLVM-exception": LicenseException(
+        id="LLVM-exception",
+        name="LLVM Exception",
+        deprecated_id=False,
+    ),
+    "LZMA-exception": LicenseException(
+        id="LZMA-exception",
+        name="LZMA exception",
+        deprecated_id=False,
+    ),
+    "mif-exception": LicenseException(
+        id="mif-exception",
+        name="Macros and Inline Functions Exception",
+        deprecated_id=False,
+    ),
+    "Nokia-Qt-exception-1.1": LicenseException(
+        id="Nokia-Qt-exception-1.1",
+        name="Nokia Qt LGPL exception 1.1",
+        deprecated_id=True,
+    ),
+    "OCaml-LGPL-linking-exception": LicenseException(
+        id="OCaml-LGPL-linking-exception",
+        name="OCaml LGPL Linking Exception",
+        deprecated_id=False,
+    ),
+    "OCCT-exception-1.0": LicenseException(
+        id="OCCT-exception-1.0",
+        name="Open CASCADE Exception 1.0",
+        deprecated_id=False,
+    ),
+    "OpenJDK-assembly-exception-1.0": LicenseException(
+        id="OpenJDK-assembly-exception-1.0",
+        name="OpenJDK Assembly exception 1.0",
+        deprecated_id=False,
+    ),
+    "openvpn-openssl-exception": LicenseException(
+        id="openvpn-openssl-exception",
+        name="OpenVPN OpenSSL Exception",
+        deprecated_id=False,
+    ),
+    "PCRE2-exception": LicenseException(
+        id="PCRE2-exception",
+        name="PCRE2 exception",
+        deprecated_id=False,
+    ),
+    "PS-or-PDF-font-exception-20170817": LicenseException(
+        id="PS-or-PDF-font-exception-20170817",
+        name="PS/PDF font exception (2017-08-17)",
+        deprecated_id=False,
+    ),
+    "QPL-1.0-INRIA-2004-exception": LicenseException(
+        id="QPL-1.0-INRIA-2004-exception",
+        name="INRIA QPL 1.0 2004 variant exception",
+        deprecated_id=False,
+    ),
+    "Qt-GPL-exception-1.0": LicenseException(
+        id="Qt-GPL-exception-1.0",
+        name="Qt GPL exception 1.0",
+        deprecated_id=False,
+    ),
+    "Qt-LGPL-exception-1.1": LicenseException(
+        id="Qt-LGPL-exception-1.1",
+        name="Qt LGPL exception 1.1",
+        deprecated_id=False,
+    ),
+    "Qwt-exception-1.0": LicenseException(
+        id="Qwt-exception-1.0",
+        name="Qwt exception 1.0",
+        deprecated_id=False,
+    ),
+    "romic-exception": LicenseException(
+        id="romic-exception",
+        name="Romic Exception",
+        deprecated_id=False,
+    ),
+    "RRDtool-FLOSS-exception-2.0": LicenseException(
+        id="RRDtool-FLOSS-exception-2.0",
+        name="RRDtool FLOSS exception 2.0",
+        deprecated_id=False,
+    ),
+    "SANE-exception": LicenseException(
+        id="SANE-exception",
+        name="SANE Exception",
+        deprecated_id=False,
+    ),
+    "SHL-2.0": LicenseException(
+        id="SHL-2.0",
+        name="Solderpad Hardware License v2.0",
+        deprecated_id=False,
+    ),
+    "SHL-2.1": LicenseException(
+        id="SHL-2.1",
+        name="Solderpad Hardware License v2.1",
+        deprecated_id=False,
+    ),
+    "stunnel-exception": LicenseException(
+        id="stunnel-exception",
+        name="stunnel Exception",
+        deprecated_id=False,
+    ),
+    "SWI-exception": LicenseException(
+        id="SWI-exception",
+        name="SWI exception",
+        deprecated_id=False,
+    ),
+    "Swift-exception": LicenseException(
+        id="Swift-exception",
+        name="Swift Exception",
+        deprecated_id=False,
+    ),
+    "Texinfo-exception": LicenseException(
+        id="Texinfo-exception",
+        name="Texinfo exception",
+        deprecated_id=False,
+    ),
+    "u-boot-exception-2.0": LicenseException(
+        id="u-boot-exception-2.0",
+        name="U-Boot exception 2.0",
+        deprecated_id=False,
+    ),
+    "UBDL-exception": LicenseException(
+        id="UBDL-exception",
+        name="Unmodified Binary Distribution exception",
+        deprecated_id=False,
+    ),
+    "Universal-FOSS-exception-1.0": LicenseException(
+        id="Universal-FOSS-exception-1.0",
+        name="Universal FOSS Exception, Version 1.0",
+        deprecated_id=False,
+    ),
+    "vsftpd-openssl-exception": LicenseException(
+        id="vsftpd-openssl-exception",
+        name="vsftpd OpenSSL exception",
+        deprecated_id=False,
+    ),
+    "WxWindows-exception-3.1": LicenseException(
+        id="WxWindows-exception-3.1",
+        name="WxWindows Library Exception 3.1",
+        deprecated_id=False,
+    ),
+    "x11vnc-openssl-exception": LicenseException(
+        id="x11vnc-openssl-exception",
+        name="x11vnc OpenSSL Exception",
+        deprecated_id=False,
     ),
 }
