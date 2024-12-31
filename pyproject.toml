@@ -38,7 +38,7 @@ license = "MIT"
 name = "spdx-license-list"
 readme = "README.md"
 repository = "https://github.com/JJMC89/spdx-license-list"
-version = "3.25.0"
+version = "3.26.0"
 
 [tool.poetry.dependencies]
 python = ">=3.9"

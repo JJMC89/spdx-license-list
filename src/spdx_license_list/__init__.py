@@ -241,6 +241,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "any-OSI-perl-modules": License(
+        id="any-OSI-perl-modules",
+        name="Any OSI License - Perl Modules",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Apache-1.0": License(
         id="Apache-1.0",
         name="Apache License 1.0",
@@ -440,6 +447,13 @@ LICENSES: dict[str, License] = {
     "Boehm-GC": License(
         id="Boehm-GC",
         name="Boehm-Demers-Weiser GC License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Boehm-GC-without-fee": License(
+        id="Boehm-GC-without-fee",
+        name="Boehm-Demers-Weiser GC License (without fee)",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -1151,6 +1165,20 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "CC-PDM-1.0": License(
+        id="CC-PDM-1.0",
+        name="Creative    Commons Public Domain Mark 1.0 Universal",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "CC-SA-1.0": License(
+        id="CC-SA-1.0",
+        name="Creative Commons Share Alike 1.0 Generic",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "CC0-1.0": License(
         id="CC0-1.0",
         name="Creative Commons Zero v1.0 Universal",
@@ -1508,6 +1536,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "DocBook-Stylesheet": License(
+        id="DocBook-Stylesheet",
+        name="DocBook Stylesheet License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "DocBook-XML": License(
         id="DocBook-XML",
         name="DocBook XML License",
@@ -1798,6 +1833,13 @@ LICENSES: dict[str, License] = {
     "GD": License(
         id="GD",
         name="GD License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "generic-xts": License(
+        id="generic-xts",
+        name="Generic XTS License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2439,6 +2481,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "InnoSetup": License(
+        id="InnoSetup",
+        name="Inno Setup License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "Intel": License(
         id="Intel",
         name="Intel Open Source License",
@@ -2915,6 +2964,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "MIPS": License(
+        id="MIPS",
+        name="MIPS License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "MirOS": License(
         id="MirOS",
         name="The MirOS Licence",
@@ -2939,6 +2995,13 @@ LICENSES: dict[str, License] = {
     "MIT-advertising": License(
         id="MIT-advertising",
         name="Enlightenment License (e16)",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "MIT-Click": License(
+        id="MIT-Click",
+        name="MIT Click License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -3979,6 +4042,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "Sendmail-Open-Source-1.1": License(
+        id="Sendmail-Open-Source-1.1",
+        name="Sendmail Open Source License v1.1",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "SGI-B-1.0": License(
         id="SGI-B-1.0",
         name="SGI Free Software License B v1.0",
@@ -4062,6 +4132,13 @@ LICENSES: dict[str, License] = {
         deprecated_id=False,
         fsf_libre=True,
         osi_approved=True,
+    ),
+    "SMAIL-GPL": License(
+        id="SMAIL-GPL",
+        name="SMAIL General Public License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
     ),
     "SMLNJ": License(
         id="SMLNJ",
@@ -4259,6 +4336,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "ThirdEye": License(
+        id="ThirdEye",
+        name="ThirdEye License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "threeparttable": License(
         id="threeparttable",
         name="threeparttable License",
@@ -4297,6 +4381,13 @@ LICENSES: dict[str, License] = {
     "TPL-1.0": License(
         id="TPL-1.0",
         name="THOR Public License 1.0",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "TrustedQSL": License(
+        id="TrustedQSL",
+        name="TrustedQSL License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -4495,6 +4586,13 @@ LICENSES: dict[str, License] = {
         name="Do What The F*ck You Want To Public License",
         deprecated_id=False,
         fsf_libre=True,
+        osi_approved=False,
+    ),
+    "wwl": License(
+        id="wwl",
+        name="WWL License",
+        deprecated_id=False,
+        fsf_libre=False,
         osi_approved=False,
     ),
     "wxWindows": License(
@@ -4745,6 +4843,11 @@ EXCEPTIONS: dict[str, LicenseException] = {
         name="Bootloader Distribution Exception",
         deprecated_id=False,
     ),
+    "CGAL-linking-exception": LicenseException(
+        id="CGAL-linking-exception",
+        name="CGAL Linking Exception",
+        deprecated_id=False,
+    ),
     "Classpath-exception-2.0": LicenseException(
         id="Classpath-exception-2.0",
         name="Classpath exception 2.0",
@@ -4817,7 +4920,7 @@ EXCEPTIONS: dict[str, LicenseException] = {
     ),
     "Gmsh-exception": LicenseException(
         id="Gmsh-exception",
-        name="Gmsh exception>",
+        name="Gmsh exception",
         deprecated_id=False,
     ),
     "GNAT-exception": LicenseException(
@@ -4838,6 +4941,11 @@ EXCEPTIONS: dict[str, LicenseException] = {
     "gnu-javamail-exception": LicenseException(
         id="gnu-javamail-exception",
         name="GNU JavaMail exception",
+        deprecated_id=False,
+    ),
+    "GPL-3.0-389-ds-base-exception": LicenseException(
+        id="GPL-3.0-389-ds-base-exception",
+        name="GPL-3.0 389 DS Base Exception",
         deprecated_id=False,
     ),
     "GPL-3.0-interface-exception": LicenseException(
@@ -4870,9 +4978,19 @@ EXCEPTIONS: dict[str, LicenseException] = {
         name="GStreamer Exception (2008)",
         deprecated_id=False,
     ),
+    "harbour-exception": LicenseException(
+        id="harbour-exception",
+        name="harbour exception",
+        deprecated_id=False,
+    ),
     "i2p-gpl-java-exception": LicenseException(
         id="i2p-gpl-java-exception",
         name="i2p GPL+Java Exception",
+        deprecated_id=False,
+    ),
+    "Independent-modules-exception": LicenseException(
+        id="Independent-modules-exception",
+        name="Independent Module Linking exception",
         deprecated_id=False,
     ),
     "KiCad-libraries-exception": LicenseException(
@@ -4918,6 +5036,11 @@ EXCEPTIONS: dict[str, LicenseException] = {
     "mif-exception": LicenseException(
         id="mif-exception",
         name="Macros and Inline Functions Exception",
+        deprecated_id=False,
+    ),
+    "mxml-exception": LicenseException(
+        id="mxml-exception",
+        name="mxml Exception",
         deprecated_id=False,
     ),
     "Nokia-Qt-exception-1.1": LicenseException(
