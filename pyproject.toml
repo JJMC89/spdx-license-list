@@ -1,31 +1,12 @@
 [build-system]
-requires = ["poetry_core>=1.0.8"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 
-[tool.black]
-target-version = ["py39"]
-line-length = 79  # default: 88
-
-
-[tool.isort]
-atomic = true
-profile = "black"
-py_version = 39
-add_imports = ["from __future__ import annotations"]
-lines_after_imports = 2
-
-
-[tool.mypy]
-python_version = 3.9
-enable_error_code = [
-    "ignore-without-code",
+[project]
+authors = [
+    { name = "JJMC89" },
 ]
-strict = true
-
-
-[tool.poetry]
-authors = ["JJMC89"]
 classifiers = [
     "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
@@ -34,11 +15,32 @@ classifiers = [
     "Typing :: Typed",
 ]
 description = "SPDX License List as a Python dictionary"
-license = "MIT"
+license = { text = "MIT" }
 name = "spdx-license-list"
 readme = "README.md"
-repository = "https://github.com/JJMC89/spdx-license-list"
+requires-python = ">=3.9"
 version = "3.26.0"
 
-[tool.poetry.dependencies]
-python = ">=3.9"
+[project.urls]
+source = "https://github.com/JJMC89/spdx-license-list"
+
+
+[tool.black]
+target-version = ["py39"]
+line-length = 79  # default: 88
+
+
+[tool.isort]
+add_imports = ["from __future__ import annotations"]
+atomic = true
+lines_after_imports = 2
+profile = "black"
+py_version = 39
+
+
+[tool.mypy]
+python_version = 3.9
+enable_error_code = [
+    "ignore-without-code",
+]
+strict = true
