@@ -353,6 +353,20 @@ LICENSES: dict[str, License] = {
         fsf_libre=True,
         osi_approved=True,
     ),
+    "Artistic-dist": License(
+        id="Artistic-dist",
+        name="Artistic License 1.0 (dist)",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Aspell-RU": License(
+        id="Aspell-RU",
+        name="Aspell Russian License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "ASWF-Digital-Assets-1.0": License(
         id="ASWF-Digital-Assets-1.0",
         name="ASWF Digital Assets License version 1.0",
@@ -527,6 +541,13 @@ LICENSES: dict[str, License] = {
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=True,
+    ),
+    "BSD-2-Clause-pkgconf-disclaimer": License(
+        id="BSD-2-Clause-pkgconf-disclaimer",
+        name="BSD 2-Clause pkgconf disclaimer variant",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
     ),
     "BSD-2-Clause-Views": License(
         id="BSD-2-Clause-Views",
@@ -1452,6 +1473,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "CryptoSwift": License(
+        id="CryptoSwift",
+        name="CryptoSwift License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "CrystalStacker": License(
         id="CrystalStacker",
         name="CrystalStacker License",
@@ -1525,6 +1553,13 @@ LICENSES: dict[str, License] = {
     "DOC": License(
         id="DOC",
         name="DOC License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "DocBook-DTD": License(
+        id="DocBook-DTD",
+        name="DocBook DTD License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -1795,9 +1830,30 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "FSFULLRSD": License(
+        id="FSFULLRSD",
+        name="FSF Unlimited License (with License Retention and Short Disclaimer)",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "FSFULLRWD": License(
         id="FSFULLRWD",
         name="FSF Unlimited License (With License Retention and Warranty Disclaimer)",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "FSL-1.1-ALv2": License(
+        id="FSL-1.1-ALv2",
+        name="Functional Source License, Version 1.1, ALv2 Future License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "FSL-1.1-MIT": License(
+        id="FSL-1.1-MIT",
+        name="Functional Source License, Version 1.1, MIT Future License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -1819,6 +1875,13 @@ LICENSES: dict[str, License] = {
     "fwlw": License(
         id="fwlw",
         name="fwlw License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Game-Programming-Gems": License(
+        id="Game-Programming-Gems",
+        name="Game Programming Gems License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2201,6 +2264,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "HDF5": License(
+        id="HDF5",
+        name="HDF5 License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "hdparm": License(
         id="hdparm",
         name="hdparm License",
@@ -2551,6 +2621,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "jove": License(
+        id="jove",
+        name="Jove License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "JPL-image": License(
         id="JPL-image",
         name="JPL Image Use Policy",
@@ -2722,6 +2799,13 @@ LICENSES: dict[str, License] = {
     "Libpng": License(
         id="Libpng",
         name="libpng License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "libpng-1.6.35": License(
+        id="libpng-1.6.35",
+        name="PNG Reference Library License v1 (for libpng 0.5 through 1.6.35)",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -2932,6 +3016,13 @@ LICENSES: dict[str, License] = {
     "MakeIndex": License(
         id="MakeIndex",
         name="MakeIndex License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "man2html": License(
+        id="man2html",
+        name="man2html License",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -3286,6 +3377,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=True,
     ),
+    "ngrep": License(
+        id="ngrep",
+        name="ngrep License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "NICTA-1.0": License(
         id="NICTA-1.0",
         name="NICTA Public Software License, Version 1.0",
@@ -3380,6 +3478,13 @@ LICENSES: dict[str, License] = {
     "NRL": License(
         id="NRL",
         name="NRL License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "NTIA-PD": License(
+        id="NTIA-PD",
+        name="NTIA Public Domain Notice",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -4168,6 +4273,13 @@ LICENSES: dict[str, License] = {
         fsf_libre=False,
         osi_approved=False,
     ),
+    "SOFA": License(
+        id="SOFA",
+        name="SOFA Software License",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
     "softSurfer": License(
         id="softSurfer",
         name="softSurfer License",
@@ -4255,6 +4367,13 @@ LICENSES: dict[str, License] = {
     "SugarCRM-1.1.3": License(
         id="SugarCRM-1.1.3",
         name="SugarCRM Public License v1.1.3",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "SUL-1.0": License(
+        id="SUL-1.0",
+        name="Sustainable Use License v1.0",
         deprecated_id=False,
         fsf_libre=False,
         osi_approved=False,
@@ -4496,6 +4615,20 @@ LICENSES: dict[str, License] = {
         deprecated_id=False,
         fsf_libre=True,
         osi_approved=True,
+    ),
+    "Unlicense-libtelnet": License(
+        id="Unlicense-libtelnet",
+        name="Unlicense - libtelnet variant",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
+    ),
+    "Unlicense-libwhirlpool": License(
+        id="Unlicense-libwhirlpool",
+        name="Unlicense - libwhirlpool variant",
+        deprecated_id=False,
+        fsf_libre=False,
+        osi_approved=False,
     ),
     "UPL-1.0": License(
         id="UPL-1.0",
@@ -4863,6 +4996,11 @@ EXCEPTIONS: dict[str, LicenseException] = {
         name="cryptsetup OpenSSL exception",
         deprecated_id=False,
     ),
+    "Digia-Qt-LGPL-exception-1.1": LicenseException(
+        id="Digia-Qt-LGPL-exception-1.1",
+        name="Digia Qt LGPL Exception version 1.1",
+        deprecated_id=False,
+    ),
     "DigiRule-FOSS-exception": LicenseException(
         id="DigiRule-FOSS-exception",
         name="DigiRule FOSS License Exception",
@@ -5071,6 +5209,11 @@ EXCEPTIONS: dict[str, LicenseException] = {
     "PCRE2-exception": LicenseException(
         id="PCRE2-exception",
         name="PCRE2 exception",
+        deprecated_id=False,
+    ),
+    "polyparse-exception": LicenseException(
+        id="polyparse-exception",
+        name="Polyparse Exception",
         deprecated_id=False,
     ),
     "PS-or-PDF-font-exception-20170817": LicenseException(

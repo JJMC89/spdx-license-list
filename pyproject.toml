@@ -19,7 +19,7 @@ license = { text = "MIT" }
 name = "spdx-license-list"
 readme = "README.md"
 requires-python = ">=3.9"
-version = "3.26.0"
+version = "3.27.0"
 
 [project.urls]
 source = "https://github.com/JJMC89/spdx-license-list"
