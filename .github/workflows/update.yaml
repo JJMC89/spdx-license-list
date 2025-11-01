@@ -67,7 +67,7 @@ jobs:
           git tag $UPSTREAM_TAG -m $UPSTREAM_TAG
           git push --follow-tags
       - name: upload dist artifacts
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v5
         with:
           name: dist
           path: dist
@@ -83,7 +83,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: download dist artifacts
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v6
         with:
           name: dist
           path: dist
