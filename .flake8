@@ -1,5 +1,5 @@
 [flake8]
-min-python-version = 3.9.0
+min-python-version = 3.10.0
 per-file-ignores =
     bin/*: D
     src/spdx_license_list/__init__.py: E501
