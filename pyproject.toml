@@ -18,7 +18,7 @@ description = "SPDX License List as a Python dictionary"
 license = { text = "MIT" }
 name = "spdx-license-list"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 version = "3.27.0"
 
 [project.urls]
@@ -26,7 +26,7 @@ source = "https://github.com/JJMC89/spdx-license-list"
 
 
 [tool.black]
-target-version = ["py39"]
+target-version = ["py310"]
 line-length = 79  # default: 88
 
 
@@ -34,11 +34,11 @@ line-length = 79  # default: 88
 add_imports = ["from __future__ import annotations"]
 atomic = true
 profile = "black"
-py_version = 39
+py_version = 310
 
 
 [tool.mypy]
-python_version = 3.9
+python_version = 3.10
 enable_error_code = [
     "ignore-without-code",
 ]
