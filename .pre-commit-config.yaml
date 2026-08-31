@@ -40,11 +40,11 @@ repos:
         args:
           - --py310-plus
   - repo: https://github.com/PyCQA/autoflake
-    rev: v2.3.3
+    rev: v2.4.0
     hooks:
       - id: autoflake
   - repo: https://github.com/PyCQA/isort
-    rev: 8.0.1
+    rev: 9.0.1
     hooks:
       - id: isort
   - repo: https://github.com/asottile/yesqa
@@ -77,7 +77,7 @@ repos:
           - flake8-typing-imports
           - pep8-naming
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: v2.3.0
+    rev: v2.3.1
     hooks:
       - id: mypy
         args: []
